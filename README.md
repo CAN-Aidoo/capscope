@@ -1,38 +1,46 @@
-# capscope: Capability Manifests for Tool-Calling LLM Agents
+# capscope: zero-inference capability manifests against prompt injection
 
-This repo is the working state of a paper-in-progress (see `draft/paper.md`).
+Code, tool profiles, pre-registered protocol and results for the paper *How Much Prompt-Injection Defense Does a
+Free Tool Whitelist Buy? Zero-Inference Capability Manifests for Tool-Calling Agents* (Clement Aidoo, CANLABS).
+capscope is the capability-scoping defense from the AI-Jailor project.
 
-## What's real right now
-- `code/capscope/manifest.py` — deterministic, LLM-free capability-derivation logic.
-- `code/capscope/pipeline.py` — AgentDojo-compatible pipeline elements (`CapabilityScopedToolsExecutor`,
-  `RecordOriginalQuery`) implementing the mechanism against the real `agentdojo` package (v0.1.35, pip-installable).
-- `code/tests/test_manifest.py` — 5 unit tests, all passing, exercising the actual security logic
-  (deny-by-default on high-sensitivity/out-of-scope tools, default-allow on low-sensitivity read tools,
-  and — importantly — an honest test that documents the mechanism's keyword-collision limitation rather
-  than hiding it).
+**Idea.** Build a tool whitelist once, from the user's instruction, by matching stemmed action verbs against per-tool
+profiles. Gate every tool call against it. Tool outputs (where injections live) can never widen it. No model call.
 
-Run it yourself:
+**Oracle result (AgentDojo v1.2, 949 user x injection pairs, ground-truth tool calls, no model):**
+
+| manifest | benign tasks kept | attacks blocked |
+|---|---|---|
+| capscope, hand-written verbs | 91% | 77% (95% CI 70-82) |
+| capscope, auto keywords | 85% | 56% |
+| oracle tools (ceiling for any tool whitelist) | 100% | 87% |
+
+13% of attacks (33% in banking) use only tools the user's own task needs; no tool-level policy can stop them.
+
+**Status.** Q1-Q3 (oracle) complete. Q4 (end-to-end with Claude Haiku) pending; see `RUN_ON_YOUR_LAPTOP.md`.
+
+## Layout
+| Path | What it is |
+|---|---|
+| `PROTOCOL.md` | Questions, metrics and profiles frozen before evaluation; dated deviations D1-D2 |
+| `code/capscope/manifest.py` | Manifest construction (Porter-stemmed keyword match) and decisions |
+| `code/capscope/pipeline.py` | AgentDojo pipeline elements: gate replacing `ToolsExecutor`, original-query recorder |
+| `code/capscope/profiles.py` | Tool profiles for workspace, travel, banking, Slack (hand-written and auto variants) |
+| `code/oracle_eval.py` | Q1-Q3: oracle evaluation -> `results/oracle.json`, `results/oracle_pairs.csv` |
+| `code/run_llm.py`, `code/analyze_llm.py` | Q4: Claude runs (no defense, capscope, LLM tool filter) and analysis |
+| `code/make_numbers.py`, `code/make_figures.py` | Every number, table and figure in the paper |
+| `paper/` | LaTeX source |
+
+## Reproduce
 ```bash
-cd code
-pip install -r requirements.txt
-PYTHONPATH=. pytest tests/ -v
+pip install -r code/requirements.txt
+cd code && PYTHONPATH=. pytest tests -q && python3 oracle_eval.py && python3 make_numbers.py && python3 make_figures.py
+cd ../paper && pdflatex main.tex && pdflatex main.tex
 ```
 
-## What's NOT done yet (and must not be faked)
-- No attack-success-rate, utility, or latency-overhead numbers exist yet. Generating them requires
-  running the full AgentDojo suite (four task suites, ~629 attack cases) against a real LLM backend —
-  either an open-source model served locally/on a rented GPU, or metered API calls (e.g. your Anthropic
-  API credits). That's a compute/cost decision only you can make, and it's the next concrete step.
-- Section 6 of `draft/paper.md` is deliberately empty. Do not fill it with plausible-sounding numbers —
-  that would be fabrication, not a shortcut, and would put your name on a paper with invented data.
+## Disclosure
+Code, analysis and drafting were carried out with the assistance of an AI model (Claude, Anthropic) under the
+author's direction. The author takes responsibility for the content.
 
-## Suggested next session
-1. Decide the model backend (recommend starting with one small open model served via Ollama/vLLM on a
-   rented GPU — cheapest, fully reproducible, no per-call API cost while you iterate).
-2. Author the `ToolProfile` table for AgentDojo's four suites (banking, Slack, travel, workspace) —
-   this is a few hours of careful, mechanical work, not research risk.
-3. Wire `CapabilityScopedToolsExecutor` into an AgentDojo `AgentPipeline` (replacing `ToolsExecutor`)
-   and run the benchmark's own scripts (`agentdojo/scripts/benchmark.py`) across all four conditions
-   in §5 of the paper.
-4. Paste real numbers into §6, write the Abstract last, then get one outside pair of eyes (even a
-   non-expert) to sanity-check the claims against the numbers before arXiv submission.
+## Licence
+MIT (code), CC BY 4.0 (data and paper).
