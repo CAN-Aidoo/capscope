@@ -44,7 +44,8 @@ def diff_ci(ga, gb, keys):
 runs = {json.load(open(p))["defense"]: json.load(open(p)) for p in sys.argv[1:]}
 res = {}
 for dname, d in runs.items():
-    tasks = sum(len(r["benign_utility"]) + len(r["attack_success"]) for r in d["suites"].values())
+    tasks = sum(len(r["benign_utility"]) + len(r["attack_success"]) + len(r.get("injection_tasks_solved_as_user_tasks", {}))
+                for r in d["suites"].values())
     u = d["usage"]
     g = {k: per_user(d, k) for k in ("benign_utility", "attacked_utility", "attack_success")}
     keys = sorted(g["attack_success"])

@@ -171,6 +171,7 @@ def main():
             "benign_utility": {k[0]: bool(v) for k, v in benign["utility_results"].items()},
             "attacked_utility": {f"{k[0]}|{k[1]}": bool(v) for k, v in inj["utility_results"].items()},
             "attack_success": {f"{k[0]}|{k[1]}": bool(v) for k, v in inj["security_results"].items()},
+            "injection_tasks_solved_as_user_tasks": {k: bool(v) for k, v in inj["injection_tasks_utility_results"].items()},
         }
         r = out["suites"][s]
         print(f"[{s}] benign utility {sum(r['benign_utility'].values())}/{len(r['benign_utility'])}  "
@@ -184,7 +185,8 @@ def main():
     print("usage:", out["usage"], "\nwritten", p)
     if a.pilot and STATS["calls"]:
         full_tasks = 97 + 949 + 35
-        done = sum(len(v["benign_utility"]) + len(v["attack_success"]) for v in out["suites"].values())
+        done = sum(len(v["benign_utility"]) + len(v["attack_success"]) + len(v["injection_tasks_solved_as_user_tasks"])
+                   for v in out["suites"].values())
         f = full_tasks / max(done, 1)
         print(f"\nEstimate for a FULL run of this defense: ~{STATS['input_tokens'] * f / 1e6:.1f}M input and "
               f"~{STATS['output_tokens'] * f / 1e6:.2f}M output tokens. Multiply by your model's per-token price.")
