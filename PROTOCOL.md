@@ -40,4 +40,12 @@ listed as dated deviations at the end.
   reported with both numbers).
 
 ## Deviations
-(none yet)
+- **D1 (2026-10-24, found while running the oracle evaluation).** In agentdojo 0.1.35, the v1.2 workspace
+  injection tasks 6-13 have a stub `ground_truth()` that returns no calls, so they were first counted as
+  "not blocked" by every manifest. Their required tools are now annotated in `oracle_eval.py` from each
+  task's goal text and `security()` check (send_email, delete_email; plus delete_file for tasks 11-12;
+  send_email only for task 13). Results are reported with the annotation, without these tasks (the 629
+  pairs of the original v1 tasks), and with a strict view that ignores the clean-up delete_email.
+  travel/injection_task_6 asks only for text in the reply; it needs no tool and stays unblockable.
+- **D2.** The protocol said 629 pairs (the AgentDojo v1 count). v1.2 has 949 pairs (40x14 workspace,
+  20x7 travel, 16x9 banking, 21x5 slack). Both counts are reported.

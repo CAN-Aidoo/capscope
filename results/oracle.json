@@ -1,0 +1,820 @@
+{
+ "MANUAL_unannotated_only": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 629,
+   "utility_preserved": 0.9072164948453608,
+   "utility_preserved_ci": [
+    0.845360824742268,
+    0.9587628865979382
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 14,
+   "blocked": 0.6518282988871225,
+   "blocked_ci": [
+    0.5761681595715209,
+    0.7257071951037467
+   ],
+   "blocked_and_preserved": 0.5818759936406995,
+   "blocked_and_preserved_ci": [
+    0.504601226993865,
+    0.660685883243999
+   ]
+  }
+ },
+ "MANUAL_strict_cleanup": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 949,
+   "utility_preserved": 0.9072164948453608,
+   "utility_preserved_ci": [
+    0.845360824742268,
+    0.9587628865979382
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 14,
+   "blocked": 0.7502634351949421,
+   "blocked_ci": [
+    0.680568863122868,
+    0.8129855139730311
+   ],
+   "blocked_and_preserved": 0.6870389884088515,
+   "blocked_and_preserved_ci": [
+    0.6083148528808632,
+    0.7585146999088616
+   ]
+  },
+  "workspace": {
+   "n_users": 40,
+   "n_pairs": 560,
+   "utility_preserved": 0.95,
+   "utility_preserved_ci": [
+    0.875,
+    1.0
+   ],
+   "benign_calls": 84,
+   "benign_calls_denied": 4,
+   "blocked": 0.9160714285714285,
+   "blocked_ci": [
+    0.8589285714285714,
+    0.9625
+   ],
+   "blocked_and_preserved": 0.8660714285714286,
+   "blocked_and_preserved_ci": [
+    0.7803571428571429,
+    0.9392857142857143
+   ]
+  },
+  "travel": {
+   "n_users": 20,
+   "n_pairs": 140,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 124,
+   "benign_calls_denied": 0,
+   "blocked": 0.6071428571428571,
+   "blocked_ci": [
+    0.5214285714285715,
+    0.6928571428571428
+   ],
+   "blocked_and_preserved": 0.6071428571428571,
+   "blocked_and_preserved_ci": [
+    0.5214285714285715,
+    0.6928571428571428
+   ]
+  },
+  "banking": {
+   "n_users": 16,
+   "n_pairs": 144,
+   "utility_preserved": 0.9375,
+   "utility_preserved_ci": [
+    0.8125,
+    1.0
+   ],
+   "benign_calls": 33,
+   "benign_calls_denied": 1,
+   "blocked": 0.3055555555555556,
+   "blocked_ci": [
+    0.125,
+    0.5208333333333334
+   ],
+   "blocked_and_preserved": 0.24305555555555555,
+   "blocked_and_preserved_ci": [
+    0.0763888888888889,
+    0.4305555555555556
+   ]
+  },
+  "slack": {
+   "n_users": 21,
+   "n_pairs": 105,
+   "utility_preserved": 0.7142857142857143,
+   "utility_preserved_ci": [
+    0.5238095238095238,
+    0.9047619047619048
+   ],
+   "benign_calls": 98,
+   "benign_calls_denied": 9,
+   "blocked": 0.6666666666666666,
+   "blocked_ci": [
+    0.5428571428571428,
+    0.780952380952381
+   ],
+   "blocked_and_preserved": 0.44761904761904764,
+   "blocked_and_preserved_ci": [
+    0.2857142857142857,
+    0.6095238095238096
+   ]
+  }
+ },
+ "AUTO_unannotated_only": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 629,
+   "utility_preserved": 0.845360824742268,
+   "utility_preserved_ci": [
+    0.7731958762886598,
+    0.9175257731958762
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 19,
+   "blocked": 0.5007949125596184,
+   "blocked_ci": [
+    0.42696239677290904,
+    0.5727699530516432
+   ],
+   "blocked_and_preserved": 0.39109697933227344,
+   "blocked_and_preserved_ci": [
+    0.3206097739143139,
+    0.4648840343286758
+   ]
+  }
+ },
+ "AUTO_strict_cleanup": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 949,
+   "utility_preserved": 0.845360824742268,
+   "utility_preserved_ci": [
+    0.7731958762886598,
+    0.9072164948453608
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 19,
+   "blocked": 0.5574288724973656,
+   "blocked_ci": [
+    0.47739551244717776,
+    0.6345610984829205
+   ],
+   "blocked_and_preserved": 0.48050579557428874,
+   "blocked_and_preserved_ci": [
+    0.39487670083253945,
+    0.5626897926289156
+   ]
+  },
+  "workspace": {
+   "n_users": 40,
+   "n_pairs": 560,
+   "utility_preserved": 0.95,
+   "utility_preserved_ci": [
+    0.875,
+    1.0
+   ],
+   "benign_calls": 84,
+   "benign_calls_denied": 2,
+   "blocked": 0.6267857142857143,
+   "blocked_ci": [
+    0.5196428571428572,
+    0.7321428571428571
+   ],
+   "blocked_and_preserved": 0.6125,
+   "blocked_and_preserved_ci": [
+    0.5,
+    0.7232142857142857
+   ]
+  },
+  "travel": {
+   "n_users": 20,
+   "n_pairs": 140,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 124,
+   "benign_calls_denied": 0,
+   "blocked": 0.35,
+   "blocked_ci": [
+    0.24285714285714285,
+    0.45714285714285713
+   ],
+   "blocked_and_preserved": 0.35,
+   "blocked_and_preserved_ci": [
+    0.24285714285714285,
+    0.45714285714285713
+   ]
+  },
+  "banking": {
+   "n_users": 16,
+   "n_pairs": 144,
+   "utility_preserved": 0.75,
+   "utility_preserved_ci": [
+    0.5,
+    0.9375
+   ],
+   "benign_calls": 33,
+   "benign_calls_denied": 4,
+   "blocked": 0.4722222222222222,
+   "blocked_ci": [
+    0.24305555555555555,
+    0.7083333333333334
+   ],
+   "blocked_and_preserved": 0.2222222222222222,
+   "blocked_and_preserved_ci": [
+    0.04861111111111111,
+    0.4166666666666667
+   ]
+  },
+  "slack": {
+   "n_users": 21,
+   "n_pairs": 105,
+   "utility_preserved": 0.5714285714285714,
+   "utility_preserved_ci": [
+    0.3333333333333333,
+    0.7619047619047619
+   ],
+   "benign_calls": 98,
+   "benign_calls_denied": 13,
+   "blocked": 0.580952380952381,
+   "blocked_ci": [
+    0.44761904761904764,
+    0.7047619047619048
+   ],
+   "blocked_and_preserved": 0.3047619047619048,
+   "blocked_and_preserved_ci": [
+    0.1523809523809524,
+    0.4666666666666667
+   ]
+  }
+ },
+ "ORACLE-TOOL_unannotated_only": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 629,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 0,
+   "blocked": 0.8139904610492846,
+   "blocked_ci": [
+    0.7609358016304348,
+    0.8638573743922204
+   ],
+   "blocked_and_preserved": 0.8139904610492846,
+   "blocked_and_preserved_ci": [
+    0.7609358016304348,
+    0.8638573743922204
+   ]
+  }
+ },
+ "ORACLE-TOOL_strict_cleanup": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 949,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 0,
+   "blocked": 0.8514225500526871,
+   "blocked_ci": [
+    0.799372875240406,
+    0.896552615626003
+   ],
+   "blocked_and_preserved": 0.8514225500526871,
+   "blocked_and_preserved_ci": [
+    0.799372875240406,
+    0.896552615626003
+   ]
+  },
+  "workspace": {
+   "n_users": 40,
+   "n_pairs": 560,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 84,
+   "benign_calls_denied": 0,
+   "blocked": 0.9178571428571428,
+   "blocked_ci": [
+    0.8553571428571428,
+    0.9696428571428571
+   ],
+   "blocked_and_preserved": 0.9178571428571428,
+   "blocked_and_preserved_ci": [
+    0.8553571428571428,
+    0.9696428571428571
+   ]
+  },
+  "travel": {
+   "n_users": 20,
+   "n_pairs": 140,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 124,
+   "benign_calls_denied": 0,
+   "blocked": 0.8071428571428572,
+   "blocked_ci": [
+    0.7714285714285715,
+    0.8428571428571429
+   ],
+   "blocked_and_preserved": 0.8071428571428572,
+   "blocked_and_preserved_ci": [
+    0.7714285714285715,
+    0.8428571428571429
+   ]
+  },
+  "banking": {
+   "n_users": 16,
+   "n_pairs": 144,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 33,
+   "benign_calls_denied": 0,
+   "blocked": 0.6736111111111112,
+   "blocked_ci": [
+    0.4861111111111111,
+    0.8541666666666666
+   ],
+   "blocked_and_preserved": 0.6736111111111112,
+   "blocked_and_preserved_ci": [
+    0.4861111111111111,
+    0.8541666666666666
+   ]
+  },
+  "slack": {
+   "n_users": 21,
+   "n_pairs": 105,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 98,
+   "benign_calls_denied": 0,
+   "blocked": 0.8,
+   "blocked_ci": [
+    0.7238095238095238,
+    0.8761904761904762
+   ],
+   "blocked_and_preserved": 0.8,
+   "blocked_and_preserved_ci": [
+    0.7238095238095238,
+    0.8761904761904762
+   ]
+  }
+ },
+ "MANUAL": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 949,
+   "utility_preserved": 0.9072164948453608,
+   "utility_preserved_ci": [
+    0.845360824742268,
+    0.9587628865979382
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 14,
+   "blocked": 0.7660695468914647,
+   "blocked_ci": [
+    0.7020584121165349,
+    0.8237171933223719
+   ],
+   "blocked_and_preserved": 0.702845100105374,
+   "blocked_and_preserved_ci": [
+    0.6274660240202276,
+    0.7710515855302035
+   ]
+  },
+  "workspace": {
+   "n_users": 40,
+   "n_pairs": 560,
+   "utility_preserved": 0.95,
+   "utility_preserved_ci": [
+    0.875,
+    1.0
+   ],
+   "benign_calls": 84,
+   "benign_calls_denied": 4,
+   "blocked": 0.9428571428571428,
+   "blocked_ci": [
+    0.9160714285714285,
+    0.9660714285714286
+   ],
+   "blocked_and_preserved": 0.8928571428571429,
+   "blocked_and_preserved_ci": [
+    0.8160714285714286,
+    0.9517857142857142
+   ]
+  },
+  "travel": {
+   "n_users": 20,
+   "n_pairs": 140,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 124,
+   "benign_calls_denied": 0,
+   "blocked": 0.6071428571428571,
+   "blocked_ci": [
+    0.5214285714285715,
+    0.6928571428571428
+   ],
+   "blocked_and_preserved": 0.6071428571428571,
+   "blocked_and_preserved_ci": [
+    0.5214285714285715,
+    0.6928571428571428
+   ]
+  },
+  "banking": {
+   "n_users": 16,
+   "n_pairs": 144,
+   "utility_preserved": 0.9375,
+   "utility_preserved_ci": [
+    0.8125,
+    1.0
+   ],
+   "benign_calls": 33,
+   "benign_calls_denied": 1,
+   "blocked": 0.3055555555555556,
+   "blocked_ci": [
+    0.125,
+    0.5277777777777778
+   ],
+   "blocked_and_preserved": 0.24305555555555555,
+   "blocked_and_preserved_ci": [
+    0.0763888888888889,
+    0.4305555555555556
+   ]
+  },
+  "slack": {
+   "n_users": 21,
+   "n_pairs": 105,
+   "utility_preserved": 0.7142857142857143,
+   "utility_preserved_ci": [
+    0.5238095238095238,
+    0.9047619047619048
+   ],
+   "benign_calls": 98,
+   "benign_calls_denied": 9,
+   "blocked": 0.6666666666666666,
+   "blocked_ci": [
+    0.5428571428571428,
+    0.780952380952381
+   ],
+   "blocked_and_preserved": 0.44761904761904764,
+   "blocked_and_preserved_ci": [
+    0.2857142857142857,
+    0.6095238095238096
+   ]
+  }
+ },
+ "AUTO": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 949,
+   "utility_preserved": 0.845360824742268,
+   "utility_preserved_ci": [
+    0.7731958762886598,
+    0.9074742268041199
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 19,
+   "blocked": 0.5574288724973656,
+   "blocked_ci": [
+    0.4771986880019754,
+    0.6332670701557161
+   ],
+   "blocked_and_preserved": 0.48050579557428874,
+   "blocked_and_preserved_ci": [
+    0.3965843943867862,
+    0.5631578947368421
+   ]
+  },
+  "workspace": {
+   "n_users": 40,
+   "n_pairs": 560,
+   "utility_preserved": 0.95,
+   "utility_preserved_ci": [
+    0.875,
+    1.0
+   ],
+   "benign_calls": 84,
+   "benign_calls_denied": 2,
+   "blocked": 0.6267857142857143,
+   "blocked_ci": [
+    0.5178571428571429,
+    0.7339285714285714
+   ],
+   "blocked_and_preserved": 0.6125,
+   "blocked_and_preserved_ci": [
+    0.49642857142857144,
+    0.725
+   ]
+  },
+  "travel": {
+   "n_users": 20,
+   "n_pairs": 140,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 124,
+   "benign_calls_denied": 0,
+   "blocked": 0.35,
+   "blocked_ci": [
+    0.24285714285714285,
+    0.45714285714285713
+   ],
+   "blocked_and_preserved": 0.35,
+   "blocked_and_preserved_ci": [
+    0.24285714285714285,
+    0.45714285714285713
+   ]
+  },
+  "banking": {
+   "n_users": 16,
+   "n_pairs": 144,
+   "utility_preserved": 0.75,
+   "utility_preserved_ci": [
+    0.5,
+    0.9375
+   ],
+   "benign_calls": 33,
+   "benign_calls_denied": 4,
+   "blocked": 0.4722222222222222,
+   "blocked_ci": [
+    0.25,
+    0.7083333333333334
+   ],
+   "blocked_and_preserved": 0.2222222222222222,
+   "blocked_and_preserved_ci": [
+    0.05555555555555555,
+    0.4166666666666667
+   ]
+  },
+  "slack": {
+   "n_users": 21,
+   "n_pairs": 105,
+   "utility_preserved": 0.5714285714285714,
+   "utility_preserved_ci": [
+    0.38095238095238093,
+    0.7619047619047619
+   ],
+   "benign_calls": 98,
+   "benign_calls_denied": 13,
+   "blocked": 0.580952380952381,
+   "blocked_ci": [
+    0.44761904761904764,
+    0.7142857142857143
+   ],
+   "blocked_and_preserved": 0.3047619047619048,
+   "blocked_and_preserved_ci": [
+    0.1523809523809524,
+    0.4573809523809489
+   ]
+  }
+ },
+ "ORACLE-CAT": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 949,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 0,
+   "blocked": 0.8261327713382508,
+   "blocked_ci": [
+    0.770419005685708,
+    0.874381800197824
+   ],
+   "blocked_and_preserved": 0.8261327713382508,
+   "blocked_and_preserved_ci": [
+    0.770419005685708,
+    0.874381800197824
+   ]
+  },
+  "workspace": {
+   "n_users": 40,
+   "n_pairs": 560,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 84,
+   "benign_calls_denied": 0,
+   "blocked": 0.95,
+   "blocked_ci": [
+    0.9214285714285714,
+    0.975
+   ],
+   "blocked_and_preserved": 0.95,
+   "blocked_and_preserved_ci": [
+    0.9214285714285714,
+    0.975
+   ]
+  },
+  "travel": {
+   "n_users": 20,
+   "n_pairs": 140,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 124,
+   "benign_calls_denied": 0,
+   "blocked": 0.8071428571428572,
+   "blocked_ci": [
+    0.7714285714285715,
+    0.8428571428571429
+   ],
+   "blocked_and_preserved": 0.8071428571428572,
+   "blocked_and_preserved_ci": [
+    0.7714285714285715,
+    0.8428571428571429
+   ]
+  },
+  "banking": {
+   "n_users": 16,
+   "n_pairs": 144,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 33,
+   "benign_calls_denied": 0,
+   "blocked": 0.4236111111111111,
+   "blocked_ci": [
+    0.2152777777777778,
+    0.6388888888888888
+   ],
+   "blocked_and_preserved": 0.4236111111111111,
+   "blocked_and_preserved_ci": [
+    0.2152777777777778,
+    0.6388888888888888
+   ]
+  },
+  "slack": {
+   "n_users": 21,
+   "n_pairs": 105,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 98,
+   "benign_calls_denied": 0,
+   "blocked": 0.7428571428571429,
+   "blocked_ci": [
+    0.6761904761904762,
+    0.8095238095238095
+   ],
+   "blocked_and_preserved": 0.7428571428571429,
+   "blocked_and_preserved_ci": [
+    0.6761904761904762,
+    0.8095238095238095
+   ]
+  }
+ },
+ "ORACLE-TOOL": {
+  "all": {
+   "n_users": 97,
+   "n_pairs": 949,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 339,
+   "benign_calls_denied": 0,
+   "blocked": 0.8724973656480506,
+   "blocked_ci": [
+    0.8290148686833759,
+    0.9085178310379318
+   ],
+   "blocked_and_preserved": 0.8724973656480506,
+   "blocked_and_preserved_ci": [
+    0.8290148686833759,
+    0.9085178310379318
+   ]
+  },
+  "workspace": {
+   "n_users": 40,
+   "n_pairs": 560,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 84,
+   "benign_calls_denied": 0,
+   "blocked": 0.9535714285714286,
+   "blocked_ci": [
+    0.925,
+    0.9785714285714285
+   ],
+   "blocked_and_preserved": 0.9535714285714286,
+   "blocked_and_preserved_ci": [
+    0.925,
+    0.9785714285714285
+   ]
+  },
+  "travel": {
+   "n_users": 20,
+   "n_pairs": 140,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 124,
+   "benign_calls_denied": 0,
+   "blocked": 0.8071428571428572,
+   "blocked_ci": [
+    0.7714285714285715,
+    0.8357142857142857
+   ],
+   "blocked_and_preserved": 0.8071428571428572,
+   "blocked_and_preserved_ci": [
+    0.7714285714285715,
+    0.8357142857142857
+   ]
+  },
+  "banking": {
+   "n_users": 16,
+   "n_pairs": 144,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 33,
+   "benign_calls_denied": 0,
+   "blocked": 0.6736111111111112,
+   "blocked_ci": [
+    0.4861111111111111,
+    0.8472222222222222
+   ],
+   "blocked_and_preserved": 0.6736111111111112,
+   "blocked_and_preserved_ci": [
+    0.4861111111111111,
+    0.8472222222222222
+   ]
+  },
+  "slack": {
+   "n_users": 21,
+   "n_pairs": 105,
+   "utility_preserved": 1.0,
+   "utility_preserved_ci": [
+    1.0,
+    1.0
+   ],
+   "benign_calls": 98,
+   "benign_calls_denied": 0,
+   "blocked": 0.8,
+   "blocked_ci": [
+    0.7238095238095238,
+    0.8666666666666667
+   ],
+   "blocked_and_preserved": 0.8,
+   "blocked_and_preserved_ci": [
+    0.7238095238095238,
+    0.8666666666666667
+   ]
+  }
+ }
+}
