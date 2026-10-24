@@ -2,3 +2,5 @@ __pycache__/
 .pytest_cache/
 *.pyc
 logs/
+runs/dryrun-*/
+runs/summary_dryrun_*
