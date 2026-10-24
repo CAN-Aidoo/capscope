@@ -1,0 +1,16 @@
+\begin{table}[t]\centering\footnotesize\setlength{\tabcolsep}{2.2pt}
+\caption{Oracle evaluation on AgentDojo v1.2 (97 user tasks, 949 user$\times$injection pairs). Each cell: user tasks with every ground-truth call allowed (\%) / pairs in which at least one ground-truth call of the injection is denied (\%). Oracle rows build the manifest from the user task's own ground truth and bound any tool-level policy.}\label{tab:oracle}
+\begin{tabular}{lccccc}
+\toprule
+manifest & workspace & travel & banking & slack & all\\
+\midrule
+capscope (hand-written) & 95 / 94 & 100 / 61 & 94 / 31 & 71 / 67 & 91 / 77\\
+capscope (auto keywords) & 95 / 63 & 100 / 35 & 75 / 47 & 57 / 58 & 85 / 56\\
+\midrule
+oracle categories & 100 / 95 & 100 / 81 & 100 / 42 & 100 / 74 & 100 / 83\\
+oracle tools & 100 / 95 & 100 / 81 & 100 / 67 & 100 / 80 & 100 / 87\\
+\midrule
+pairs & 560 & 140 & 144 & 105 & 949\\
+\bottomrule
+\end{tabular}
+\end{table}

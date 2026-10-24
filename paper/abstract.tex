@@ -1,0 +1,16 @@
+\begin{abstract}
+Defenses against indirect prompt injection that work well today put a language model in the loop, which adds model
+calls and latency to every task. We ask how much protection a tool-calling agent can get for free. capscope builds a
+tool whitelist (a \emph{capability manifest}) once from the user's instruction by matching stemmed action verbs against
+per-tool profiles written from documentation. It then gates every tool call, and nothing the agent reads later can widen
+the whitelist. Building the manifest takes under a millisecond and no model call. In an oracle evaluation on all
+\N{nPairs} user$\times$injection pairs of AgentDojo v1.2, using the benchmark's ground-truth tool calls, the manifest keeps
+every needed tool for \N{manPres}\% of benign tasks and denies a tool the attack needs in \N{manBlk}\% of pairs
+(95\% interval \N{manBlkCI}\%). Mechanically extracted keywords do much worse (\N{autoBlk}\%). Even an oracle whitelist
+that knows exactly which tools each user task needs blocks only \N{otoolBlk}\%. The other \N{unblockable}\% of attacks,
+\N{unblockablebanking}\% in banking, use only tools the user's own task needs, so no tool-level policy can stop them.
+Most benign failures come from tasks that delegate their instructions to an email, file or web page, which is the
+channel injections use. A free whitelist therefore removes most attacks that need a new capability, and the
+\N{unblockable}\% that reuse the user's own capabilities mark where argument- and data-flow-level defenses become
+necessary. Protocol, profiles, code and per-pair results are public.
+\end{abstract}

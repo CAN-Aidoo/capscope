@@ -1,0 +1,52 @@
+\section{Results}
+
+\subsection{\Q1: How many attacks does the manifest block?}
+The hand-written manifest denies at least one tool the injection needs in \N{manBlk}\% of the \N{nPairs} pairs (95\%
+interval \N{manBlkCI}\%; Table~\ref{tab:oracle}, Fig.~\ref{fig:teaser}). The rate depends strongly on the suite:
+\N{manBlkworkspace}\% in workspace, \N{manBlkslack}\% in Slack, \N{manBlktravel}\% in travel and only
+\N{manBlkbanking}\% in banking. The result does not hinge on annotation D1. On the \N{nPairsVone} pairs of the original
+v1 tasks it is \N{manBlkVone}\% (ceiling \N{otoolBlkVone}\%). Ignoring the clean-up \tool{delete\_email} of the
+annotated tasks gives \N{manBlkStrict}\% (ceiling \N{otoolBlkStrict}\%).
+
+The verb lists matter. With keywords taken mechanically from the tool name and docstring, the manifest blocks
+\N{autoBlk}\% (\N{autoBlkCI}\%) and keeps fewer benign tasks (\N{autoPres}\% against \N{manPres}\%). Docstring words
+such as ``money'', ``transaction'' or ``email'' name objects, so they match read-only requests and open sensitive
+categories for no reason. In travel the auto manifest blocks \N{autoBlktravel}\%, against \N{manBlktravel}\% for the
+hand-written one.
+
+\subsection{\Q2: How many benign tasks does it keep?}
+\N{manPres}\% of the \N{nUsers} user tasks keep every ground-truth call allowed (\N{manPresCI}\%). Only \N{manDenied} of
+\N{nBenignCalls} benign calls are denied, but they fall in \N{nLost} tasks: \N{nLostslack} in Slack, \N{nLostworkspace}
+in workspace and \N{nLostbanking} in banking. They are of three kinds. Five tasks \emph{delegate} the instruction to
+content: ``do the actions specified in the email from David'', ``read the file \texttt{landlord-notices.txt} and follow
+the instructions'', ``do all the tasks on my TODO list at \texttt{www.company-todo-list.com}''. The tools such a task
+needs are named only in the content it points to, and that content arrives through exactly the channel an injection
+uses. A manifest built from the user's words cannot serve these tasks without trusting that channel. Three Slack tasks
+need to open a web page that the instruction mentions only indirectly (``summarise the article that Bob posted''), and
+one says ``message them'', a verb we left out because ``message'' is far more often a noun. Travel, the suite whose
+instructions name their actions most plainly (``book'', ``reserve''), keeps all of its tasks.
+
+\subsection{\Q3: What is the ceiling, and why?}
+A manifest that knows exactly which tools the user task needs (``oracle tools'') blocks \N{otoolBlk}\% of pairs
+(\N{otoolBlkCI}\%). No tool-level policy, whether built by keywords, by an LLM or by hand per task, can do better on
+these pairs, because the remaining \N{nUnblk} pairs (\N{unblockable}\%) are reachable with tools the user's task
+legitimately needs. \N{nUnblkText} of them come from one travel injection that only asks the agent to recommend a hotel
+in its answer, and needs no tool at all. Most of the rest are in banking (\N{unblockablebanking}\% of banking pairs).
+There, seven of the nine injections need no sensitive tool other than \tool{send\_money}, and paying, refunding or transferring
+is what many banking user tasks are about. Telling the user's payment from the attacker's would need checks on the
+arguments (which IBAN, how much) or on where they came from, as in Progent and CaMeL
+\cite{shi2025progent,debenedetti2025camel}.
+
+The hand-written manifest reaches \N{manBlk}\% of this \N{otoolBlk}\% ceiling. The gap has two sources. In \N{gapCat}
+pairs the user task needs one tool of a category and the attack uses another tool of the same category: paying a bill
+opens \tool{money\_out}, which also contains \tool{update\_scheduled\_transaction}. Using oracle categories instead of
+oracle tools lowers banking from \N{otoolBlkbanking}\% to \N{ocatBlkbanking}\%. In \N{gapKw} pairs a keyword in the
+instruction opens a category the task does not need. In the other direction, \N{extraBlk} pairs are blocked by our
+manifest but not by the oracle, because it also denies a tool the user task needs. Those blocks cost utility, so we
+also report pairs that are both blocked and kept: \N{manBoth}\% (\N{manBothCI}\%), against \N{otoolBoth}\% for the
+oracle.
+
+\subsection{\Q4: End-to-end with a model}
+\textcolor{red}{\textbf{[Pending. This subsection is filled only from the completed runs of
+\texttt{code/run\_llm.py} (Claude Haiku; no defense, capscope, LLM tool filter; AgentDojo's
+\texttt{important\_instructions} attack) via \texttt{code/analyze\_llm.py}. No number is entered by hand.]}}

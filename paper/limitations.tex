@@ -1,0 +1,18 @@
+\section{Limitations}
+The oracle evaluation measures what the manifest permits along each task's ground-truth tool sequence, not what a model
+does. A model may solve a task with other tools, or follow an injection only partly, so \Q1--\Q3 bound attack success
+rather than measure it; \Q4 measures it. The profiles were written by the author for this benchmark, from docstrings
+and before evaluation, but a different author would choose different verbs; the auto variant shows the method is
+sensitive to that choice. The matcher is lexical: a paraphrase without a listed verb (``get Bob his money back'') is
+missed, and an instruction that names an action it forbids (``do not delete anything'') opens it. Knowing the
+profiles does not let an attacker widen the manifest, because it depends only on the user's text, but it does tell
+them which tools stay open. A user task that delegates its instructions to content is unprotected by design. Results are for AgentDojo's four simulated suites and
+English instructions only.
+
+\section{Conclusion}
+A tool whitelist computed once from the user's own words, with no model call, blocks most prompt-injection attacks
+that need a capability the user did not ask for, and keeps most legitimate tasks working. Its failures are
+informative. Benign tasks break when the user delegates the instruction to untrusted content, and \N{unblockable}\% of
+attacks cannot be stopped by any tool-level policy because they reuse the capabilities the user's task requires. For
+cost-sensitive deployments the manifest is a sensible first layer. The cases it cannot handle, delegation and reuse of
+the user's own capabilities, are exactly where model-based or data-flow defenses should spend their cost.
