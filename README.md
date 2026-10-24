@@ -17,12 +17,12 @@ profiles. Gate every tool call against it. Tool outputs (where injections live) 
 
 13% of attacks (33% in banking) use only tools the user's own task needs; no tool-level policy can stop them.
 
-**Status.** Q1-Q3 (oracle) complete. Q4 (end-to-end with Claude Haiku) pending; see `RUN_ON_YOUR_LAPTOP.md`.
+**Status.** Q1-Q3 (oracle) complete and reported. The end-to-end run with a model (Q4) was not carried out (deviation D3); the harness is in `code/run_llm.py` and `RUN_ON_YOUR_LAPTOP.md` explains how to run it.
 
 ## Layout
 | Path | What it is |
 |---|---|
-| `PROTOCOL.md` | Questions, metrics and profiles frozen before evaluation; dated deviations D1-D2 |
+| `PROTOCOL.md` | Questions, metrics and profiles frozen before evaluation; dated deviations D1-D3 |
 | `code/capscope/manifest.py` | Manifest construction (Porter-stemmed keyword match) and decisions |
 | `code/capscope/pipeline.py` | AgentDojo pipeline elements: gate replacing `ToolsExecutor`, original-query recorder |
 | `code/capscope/profiles.py` | Tool profiles for workspace, travel, banking, Slack (hand-written and auto variants) |

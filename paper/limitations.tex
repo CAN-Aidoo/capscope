@@ -1,7 +1,11 @@
-\section{Limitations}
+\section{Limitations}\label{sec:lim}
 The oracle evaluation measures what the manifest permits along each task's ground-truth tool sequence, not what a model
-does. A model may solve a task with other tools, or follow an injection only partly, so \Q1--\Q3 bound attack success
-rather than measure it; \Q4 measures it. The profiles were written by the author for this benchmark, from docstrings
+does. A model may solve a task with other tools, follow an injection only partly, or ignore it, so \Q1--\Q3 bound attack
+success rather than measure it. We did not run the planned end-to-end evaluation with a model (D3). The released
+\texttt{run\_llm.py} runs AgentDojo with Claude under no defense, capscope and an LLM tool filter, and records attack
+success, utility, extra model calls and latency; it has been checked offline with a scripted stand-in model only.
+Without that run we cannot say how often a model, faced with a denial message, finds another route to the
+injection's goal or abandons the user's task. The profiles were written by the author for this benchmark, from docstrings
 and before evaluation, but a different author would choose different verbs; the auto variant shows the method is
 sensitive to that choice. The matcher is lexical: a paraphrase without a listed verb (``get Bob his money back'') is
 missed, and an instruction that names an action it forbids (``do not delete anything'') opens it. Knowing the

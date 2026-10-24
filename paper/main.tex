@@ -132,15 +132,16 @@ ground truth, at category or tool granularity. They cannot be deployed, but they
 prompt. AgentDojo's own success checks require the whole injection goal, so denying one required call defeats it. 95\%
 intervals bootstrap over user tasks (10{,}000 resamples), because pairs that share a user task are not independent.
 
-\textbf{Protocol.} The questions, metrics and profiles were committed before evaluation (\texttt{PROTOCOL.md}). Two
+\textbf{Protocol.} The questions, metrics and profiles were committed before evaluation (\texttt{PROTOCOL.md}). Three
 deviations are recorded there. (D1) In the released package, workspace injection tasks 6--13 return an empty ground
 truth; we annotated their tools from each task's goal and its \texttt{security} check. We also report results without
 them and a strict view that ignores their clean-up \tool{delete\_email}. (D2) The protocol quoted AgentDojo v1's 629
-pairs; v1.2 has \N{nPairs}. No profile was changed after results were seen.
+pairs; v1.2 has \N{nPairs}. (D3) The planned end-to-end run with a model was not carried out for lack of an API
+budget; its code is released. No profile was changed after results were seen.
 
 \textbf{Questions.} \Q1: how many attacks does the manifest block? \Q2: how many benign tasks does it keep? \Q3: what is
-the ceiling for any tool-level manifest, and why? \Q4: with a real model, how do attack success, utility and cost
-compare with no defense and with an LLM tool filter?
+the ceiling for any tool-level manifest, and why? An end-to-end run with a model was planned as a fourth question
+but not carried out (deviation D3, Section~\ref{sec:lim}).
 
 \input{tab_oracle.tex}
 

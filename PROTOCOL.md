@@ -49,3 +49,6 @@ listed as dated deviations at the end.
   travel/injection_task_6 asks only for text in the reply; it needs no tool and stays unblockable.
 - **D2.** The protocol said 629 pairs (the AgentDojo v1 count). v1.2 has 949 pairs (40x14 workspace,
   20x7 travel, 16x9 banking, 21x5 slack). Both counts are reported.
+- **D3 (2026-10-24).** Q4 (end-to-end run with Claude Haiku) was not carried out: no API budget was available.
+  The paper reports Q1-Q3 only and says so. `code/run_llm.py` and `code/analyze_llm.py` are released unchanged
+  (checked offline with a scripted stand-in model) so that Q4 can be run later without modifying the method.
