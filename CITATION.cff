@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "capscope: zero-inference capability manifests against prompt injection"
+authors:
+  - family-names: Aidoo
+    given-names: Clement
+    affiliation: CANLABS, Ghana
+    orcid: "https://orcid.org/0009-0005-6893-2677"
+version: "1.0.0"
+doi: 10.5281/zenodo.23636157
+date-released: 2026-10-25
+repository-code: "https://github.com/CAN-Aidoo/capscope"
+license: MIT

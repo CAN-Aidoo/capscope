@@ -4,6 +4,8 @@ Code, tool profiles, pre-registered protocol and results for the paper *How Much
 Free Tool Whitelist Buy? Zero-Inference Capability Manifests for Tool-Calling Agents* (Clement Aidoo, CANLABS).
 capscope is the capability-scoping defense from the AI-Jailor project.
 
+Archived release: [doi:10.5281/zenodo.23636157](https://doi.org/10.5281/zenodo.23636157)
+
 **Idea.** Build a tool whitelist once, from the user's instruction, by matching stemmed action verbs against per-tool
 profiles. Gate every tool call against it. Tool outputs (where injections live) can never widen it. No model call.
 
