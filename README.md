@@ -1,3 +1,5 @@
+![How much prompt-injection defense does a free tool whitelist buy? capscope blocks 77% of attacks and keeps 91% of benign tasks; any tool whitelist tops out at 87%.](assets/banner.png)
+
 # capscope: zero-inference capability manifests against prompt injection
 
 Code, tool profiles, pre-registered protocol and results for the paper *How Much Prompt-Injection Defense Does a
